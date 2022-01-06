@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A22131972784783500FEBD85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22131962784783500FEBD85 /* GoogleService-Info.plist */; };
+		A248E87227857D2C0063EB24 /* HotelImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87127857D2C0063EB24 /* HotelImageCollectionViewCell.swift */; };
+		A248E87427857D410063EB24 /* SpaImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87327857D410063EB24 /* SpaImageCollectionViewCell.swift */; };
+		A248E87627857DBB0063EB24 /* HotelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87527857DBB0063EB24 /* HotelDetailsViewController.swift */; };
+		A248E87827857DC70063EB24 /* SpaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87727857DC70063EB24 /* SpaDetailsViewController.swift */; };
+		A248E87A27858D370063EB24 /* HotelFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87927858D370063EB24 /* HotelFormViewController.swift */; };
+		A248E87C27858D460063EB24 /* SpaFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87B27858D460063EB24 /* SpaFormViewController.swift */; };
 		A24F97BE278358FC009A9A15 /* HotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24F97BD278358FC009A9A15 /* HotelViewController.swift */; };
 		A26CCFA0278343F800600564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CCF9F278343F800600564 /* AppDelegate.swift */; };
 		A26CCFA2278343F800600564 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CCFA1278343F800600564 /* SceneDelegate.swift */; };
@@ -32,6 +38,12 @@
 
 /* Begin PBXFileReference section */
 		A22131962784783500FEBD85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A248E87127857D2C0063EB24 /* HotelImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A248E87327857D410063EB24 /* SpaImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		A248E87527857DBB0063EB24 /* HotelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsViewController.swift; sourceTree = "<group>"; };
+		A248E87727857DC70063EB24 /* SpaDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaDetailsViewController.swift; sourceTree = "<group>"; };
+		A248E87927858D370063EB24 /* HotelFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelFormViewController.swift; sourceTree = "<group>"; };
+		A248E87B27858D460063EB24 /* SpaFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaFormViewController.swift; sourceTree = "<group>"; };
 		A24F97BD278358FC009A9A15 /* HotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewController.swift; sourceTree = "<group>"; };
 		A26CCF9C278343F800600564 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26CCF9F278343F800600564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +138,10 @@
 				A278FDF027838863009780A8 /* SignUpViewController.swift */,
 				A278FDF227838871009780A8 /* SignInViewController.swift */,
 				A278FDF427838892009780A8 /* ForgottenPasswordViewController.swift */,
+				A248E87527857DBB0063EB24 /* HotelDetailsViewController.swift */,
+				A248E87727857DC70063EB24 /* SpaDetailsViewController.swift */,
+				A248E87927858D370063EB24 /* HotelFormViewController.swift */,
+				A248E87B27858D460063EB24 /* SpaFormViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +168,8 @@
 				A26CCFCC27834C4C00600564 /* HotelTableViewCell.swift */,
 				A278FDEA27837F85009780A8 /* NewsAndAdsCollectionViewCell.swift */,
 				A278FDEE278386D9009780A8 /* StatusTableViewCell.swift */,
+				A248E87127857D2C0063EB24 /* HotelImageCollectionViewCell.swift */,
+				A248E87327857D410063EB24 /* SpaImageCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -240,16 +258,22 @@
 				A278FDF127838863009780A8 /* SignUpViewController.swift in Sources */,
 				A26CCFA4278343F800600564 /* ViewController.swift in Sources */,
 				A278FDEF278386D9009780A8 /* StatusTableViewCell.swift in Sources */,
+				A248E87427857D410063EB24 /* SpaImageCollectionViewCell.swift in Sources */,
 				A278FDED27838036009780A8 /* ProfileViewController.swift in Sources */,
+				A248E87827857DC70063EB24 /* SpaDetailsViewController.swift in Sources */,
 				A26CCFA0278343F800600564 /* AppDelegate.swift in Sources */,
 				A24F97BE278358FC009A9A15 /* HotelViewController.swift in Sources */,
 				A26CCFA2278343F800600564 /* SceneDelegate.swift in Sources */,
+				A248E87627857DBB0063EB24 /* HotelDetailsViewController.swift in Sources */,
 				A26CCFCD27834C4C00600564 /* HotelTableViewCell.swift in Sources */,
+				A248E87A27858D370063EB24 /* HotelFormViewController.swift in Sources */,
 				A278FDF327838871009780A8 /* SignInViewController.swift in Sources */,
 				A278FDF527838892009780A8 /* ForgottenPasswordViewController.swift in Sources */,
 				A278FDE72783696C009780A8 /* SpaViewController.swift in Sources */,
 				A278FDEB27837F85009780A8 /* NewsAndAdsCollectionViewCell.swift in Sources */,
 				A26CCFCB27834C1300600564 /* SpaTableViewCell.swift in Sources */,
+				A248E87C27858D460063EB24 /* SpaFormViewController.swift in Sources */,
+				A248E87227857D2C0063EB24 /* HotelImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
