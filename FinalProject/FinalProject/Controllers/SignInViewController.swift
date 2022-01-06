@@ -24,15 +24,18 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func clickedSignIn(_ sender: Any) {
-        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { authResult, error in
+        Auth.auth().signIn(withEmail: email.text! , password: password.text! ) { authResult, error in
             if error == nil {
-                self.performSegue(withIdentifier: "ProfileViewController", sender: nil)
-                
-            }else{
+                self.performSegue(withIdentifier: "ToProfile2", sender: nil)
+                print("Successfully logged in")
+            } else {
                 print(error?.localizedDescription)
+                print("Log in failed")
             }
         }
     }
     
-    
 }
+
+
+
