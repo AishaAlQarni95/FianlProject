@@ -11,6 +11,8 @@ class SpaTableViewCell: UITableViewCell {
 
     @IBOutlet weak var spaImage: UIImageView!
     @IBOutlet weak var spaName: UILabel!
+    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var review: UILabel!
     
     
 }

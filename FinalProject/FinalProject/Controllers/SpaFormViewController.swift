@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 
 class SpaFormViewController: UIViewController {
-    
     let db = Firestore.firestore()
     let spaId = UUID().uuidString
     let imageView = UIImageView()
@@ -24,20 +23,18 @@ class SpaFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uploadImage()
-        // Do any additional setup after loading the view.
     }
-    
-    
+    //MARK: Saving data to firestore & storage
     @IBAction func formSubmissionButton(_ sender: Any) {
-        db.collection("Spas").document("Spa").setData([
+        db.collection("Spa request").document("Spa details").setData([
             "SpaID": spaId,
             "Name": name.text!,
             "Owner": owner.text!,
             "Location": location.text!,
             "Price": price.text!,
             "Description": Description.text!,
-            "Services":services.text!,
-            "Photo":""
+            "Services": services.text!,
+            "Photo": self.imageView.image == UIImage(named: "profile") ? "nil" : self.imageName
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -47,14 +44,14 @@ class SpaFormViewController: UIViewController {
         }
         uploadImage()
     }
-    
+    //MARK: Saving hotel's photos to storage
     func uploadImage(){
         let imagefolder = Storage.storage().reference().child("Spa images")
         if let imageData = imageView.image?.jpegData(compressionQuality: 0.1) {
             imagefolder.child(imageName).putData(imageData, metadata: nil){
                 (metaData , err) in
                 if let error = err {
-                    print("Error in image uploading: \(error.localizedDescription ?? "")")
+                    print("Error writing document: \(error)")
                 }else {
                     print("Image uploaded successfuly")
                 }
@@ -63,8 +60,7 @@ class SpaFormViewController: UIViewController {
     }
 }
 extension SpaFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    // MARK: - Image Picker
+    //MARK: - Image Picker
     @IBAction func upLoadPhoto(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -72,7 +68,7 @@ extension SpaFormViewController: UIImagePickerControllerDelegate, UINavigationCo
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
-    // MARK: - Image Picker Delegates
+    //MARK: - Image Picker Delegates
     func imagePickerController(
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
@@ -81,7 +77,7 @@ extension SpaFormViewController: UIImagePickerControllerDelegate, UINavigationCo
         imageView.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
-    // MARK: - Image Picker Cancelation
+    //MARK: - Image Picker Cancelation
     func imagePickerControllerDidCancel(
         _ picker: UIImagePickerController
     ) {

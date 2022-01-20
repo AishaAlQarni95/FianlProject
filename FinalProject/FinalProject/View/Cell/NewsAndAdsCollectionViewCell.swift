@@ -9,5 +9,10 @@ import UIKit
 
 class NewsAndAdsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var image: UIImageView!
+
+    @IBOutlet weak var adsPhoto: UIImageView!
+    
+
+    
+
 }

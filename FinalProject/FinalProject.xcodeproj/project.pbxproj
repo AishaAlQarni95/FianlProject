@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A22131972784783500FEBD85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22131962784783500FEBD85 /* GoogleService-Info.plist */; };
+		A247E8CF27972D5400285FFB /* AdsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247E8CE27972D5400285FFB /* AdsStruct.swift */; };
+		A247E8D1279817DA00285FFB /* PageControlDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247E8D0279817DA00285FFB /* PageControlDesign.swift */; };
 		A248E87227857D2C0063EB24 /* HotelImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87127857D2C0063EB24 /* HotelImageCollectionViewCell.swift */; };
 		A248E87427857D410063EB24 /* SpaImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87327857D410063EB24 /* SpaImageCollectionViewCell.swift */; };
 		A248E87627857DBB0063EB24 /* HotelDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248E87527857DBB0063EB24 /* HotelDetailsViewController.swift */; };
@@ -27,6 +29,7 @@
 		A26CCFC32783466800600564 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A26CCFC22783466800600564 /* FirebaseStorage */; };
 		A26CCFCB27834C1300600564 /* SpaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CCFCA27834C1300600564 /* SpaTableViewCell.swift */; };
 		A26CCFCD27834C4C00600564 /* HotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26CCFCC27834C4C00600564 /* HotelTableViewCell.swift */; };
+		A2728CDF2799CEF50084507F /* TextFieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2728CDE2799CEF40084507F /* TextFieldDesign.swift */; };
 		A278FDE72783696C009780A8 /* SpaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A278FDE62783696C009780A8 /* SpaViewController.swift */; };
 		A278FDEB27837F85009780A8 /* NewsAndAdsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A278FDEA27837F85009780A8 /* NewsAndAdsCollectionViewCell.swift */; };
 		A278FDED27838036009780A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A278FDEC27838036009780A8 /* ProfileViewController.swift */; };
@@ -34,10 +37,15 @@
 		A278FDF127838863009780A8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A278FDF027838863009780A8 /* SignUpViewController.swift */; };
 		A278FDF327838871009780A8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A278FDF227838871009780A8 /* SignInViewController.swift */; };
 		A278FDF527838892009780A8 /* ForgottenPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A278FDF427838892009780A8 /* ForgottenPasswordViewController.swift */; };
+		A2E90C5E27969AAC00C89B8C /* SpaStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E90C5D27969AAC00C89B8C /* SpaStruct.swift */; };
+		A2E90C6027969AC800C89B8C /* HotelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E90C5F27969AC800C89B8C /* HotelStruct.swift */; };
+		A2E90C662796BFF900C89B8C /* ButtonBorderDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E90C652796BFF900C89B8C /* ButtonBorderDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A22131962784783500FEBD85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A247E8CE27972D5400285FFB /* AdsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsStruct.swift; sourceTree = "<group>"; };
+		A247E8D0279817DA00285FFB /* PageControlDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlDesign.swift; sourceTree = "<group>"; };
 		A248E87127857D2C0063EB24 /* HotelImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A248E87327857D410063EB24 /* SpaImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A248E87527857DBB0063EB24 /* HotelDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,7 @@
 		A26CCFAD278343FA00600564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A26CCFCA27834C1300600564 /* SpaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaTableViewCell.swift; sourceTree = "<group>"; };
 		A26CCFCC27834C4C00600564 /* HotelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewCell.swift; sourceTree = "<group>"; };
+		A2728CDE2799CEF40084507F /* TextFieldDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDesign.swift; sourceTree = "<group>"; };
 		A278FDE62783696C009780A8 /* SpaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaViewController.swift; sourceTree = "<group>"; };
 		A278FDEA27837F85009780A8 /* NewsAndAdsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndAdsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A278FDEC27838036009780A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +71,9 @@
 		A278FDF027838863009780A8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A278FDF227838871009780A8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A278FDF427838892009780A8 /* ForgottenPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordViewController.swift; sourceTree = "<group>"; };
+		A2E90C5D27969AAC00C89B8C /* SpaStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaStruct.swift; sourceTree = "<group>"; };
+		A2E90C5F27969AC800C89B8C /* HotelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelStruct.swift; sourceTree = "<group>"; };
+		A2E90C652796BFF900C89B8C /* ButtonBorderDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBorderDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +161,7 @@
 		A26CCFB62783441300600564 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2E90C612796A85C00C89B8C /* Extension */,
 				A26CCFB8278345A000600564 /* Cell */,
 			);
 			path = View;
@@ -157,6 +170,7 @@
 		A26CCFB72783441600600564 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2E90C642796A89E00C89B8C /* Struct */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +186,26 @@
 				A248E87327857D410063EB24 /* SpaImageCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A2E90C612796A85C00C89B8C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A2E90C652796BFF900C89B8C /* ButtonBorderDesign.swift */,
+				A247E8D0279817DA00285FFB /* PageControlDesign.swift */,
+				A2728CDE2799CEF40084507F /* TextFieldDesign.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A2E90C642796A89E00C89B8C /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				A2E90C5D27969AAC00C89B8C /* SpaStruct.swift */,
+				A2E90C5F27969AC800C89B8C /* HotelStruct.swift */,
+				A247E8CE27972D5400285FFB /* AdsStruct.swift */,
+			);
+			path = Struct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,12 +296,18 @@
 				A278FDED27838036009780A8 /* ProfileViewController.swift in Sources */,
 				A248E87827857DC70063EB24 /* SpaDetailsViewController.swift in Sources */,
 				A26CCFA0278343F800600564 /* AppDelegate.swift in Sources */,
+				A247E8CF27972D5400285FFB /* AdsStruct.swift in Sources */,
+				A247E8D1279817DA00285FFB /* PageControlDesign.swift in Sources */,
+				A2E90C5E27969AAC00C89B8C /* SpaStruct.swift in Sources */,
 				A24F97BE278358FC009A9A15 /* HotelViewController.swift in Sources */,
 				A26CCFA2278343F800600564 /* SceneDelegate.swift in Sources */,
+				A2E90C662796BFF900C89B8C /* ButtonBorderDesign.swift in Sources */,
 				A248E87627857DBB0063EB24 /* HotelDetailsViewController.swift in Sources */,
 				A26CCFCD27834C4C00600564 /* HotelTableViewCell.swift in Sources */,
+				A2728CDF2799CEF50084507F /* TextFieldDesign.swift in Sources */,
 				A248E87A27858D370063EB24 /* HotelFormViewController.swift in Sources */,
 				A278FDF327838871009780A8 /* SignInViewController.swift in Sources */,
+				A2E90C6027969AC800C89B8C /* HotelStruct.swift in Sources */,
 				A278FDF527838892009780A8 /* ForgottenPasswordViewController.swift in Sources */,
 				A278FDE72783696C009780A8 /* SpaViewController.swift in Sources */,
 				A278FDEB27837F85009780A8 /* NewsAndAdsCollectionViewCell.swift in Sources */,

@@ -9,32 +9,29 @@ import UIKit
 import Firebase
 
 class HotelFormViewController: UIViewController {
-    let db = Firestore.firestore()
-    let hotelId = UUID().uuidString
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var owner: UITextField!
     @IBOutlet weak var Description: UITextField!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var price: UITextField!
+    let db = Firestore.firestore()
+    let hotelId = UUID().uuidString
+    let imageView = UIImageView()
     var imageName = "\(UUID().uuidString).png"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        uploadImage()
     }
-    
-
     @IBAction func formSubmissionButton(_ sender: Any) {
-        
-        db.collection("Hotels").document("Hotel").setData([
+        db.collection("Hotel request").document("Hotel details").setData([
             "HotelID": hotelId,
             "Name": name.text!,
             "Owner": owner.text!,
             "Location": location.text!,
             "Price": price.text!,
             "Description": Description.text!,
-            "Photo":""
+            "Photo": self.imageView.image == UIImage(named: "profile") ? "nil" : self.imageName
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -42,16 +39,24 @@ class HotelFormViewController: UIViewController {
                 print("Document successfully written!")
             }
         }
-        
+        uploadImage()
     }
-    
-    
-
-    
-
+    //MARK: Saving hotel's photos to storage
+    func uploadImage(){
+        let imagefolder = Storage.storage().reference().child("Hotel images")
+        if let imageData = imageView.image?.jpegData(compressionQuality: 0.1) {
+            imagefolder.child(imageName).putData(imageData, metadata: nil){
+                (metaData , err) in
+                if let error = err {
+                    print("Error writing document: \(error)")
+                }else {
+                    print("Image uploaded successfuly")
+                }
+            }
+        }
+    }
 }
 extension HotelFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
     // MARK: - Image Picker
     @IBAction func didTapButton(_ sender: Any) {
         let imagePicker = UIImagePickerController()
@@ -60,38 +65,19 @@ extension HotelFormViewController: UIImagePickerControllerDelegate, UINavigation
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true)
     }
-    
     // MARK: - Image Picker Delegates
     func imagePickerController(
-      _ picker: UIImagePickerController,
-      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
+        _ picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
-        
-      dismiss(animated: true, completion: nil)
+        guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        imageView.image = selectedImage
+        dismiss(animated: true, completion: nil)
     }
-
+    //MARK: - Image Picker Cancelation
     func imagePickerControllerDidCancel(
-      _ picker: UIImagePickerController
+        _ picker: UIImagePickerController
     ) {
-      dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
-    
-    
-//    func uploadImage(){
-//           let imagefolder = Storage.storage().reference().child("images")
-//           //@IBOutlet weak var userImg: UIImageView!
-//           if let imageData = userImg.image?.jpegData(compressionQuality: 0.1) {
-//               imagefolder.child(imageName).putData(imageData, metadata: nil){
-//                   (metaData , err) in
-//                   if let error = err {
-//                       print("Error in image uploading: \(error?.localizedDescription ?? "")")
-//                   }else {
-//                       print("Image uploaded successfuly")
-//                   }
-//               }
-//           }
-//       }
 }
-//if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-//   imageView.contentMode = .ScaleAspectFit
-//   imageView.image = pickedImage
