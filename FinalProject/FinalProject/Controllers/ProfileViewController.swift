@@ -14,17 +14,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var labelOne: UILabel!
     @IBOutlet weak var labelTwo: UILabel!
-    @IBOutlet weak var labelThree: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var hotelButton: UIButton!
+    @IBOutlet weak var spaButton: UIButton!
     let db = Firestore.firestore()
     var userId = Auth.auth().currentUser?.uid
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        loadUser()
         signOutButton.redFloatButton()
         backButton.yellowFloatButton()
-        loadUser()
+        hotelButton.yellowButton()
+        spaButton.greenButton()
         avatar.layer.cornerRadius = avatar.frame.height / 2
     }
     func loadUser() {
@@ -34,7 +37,6 @@ class ProfileViewController: UIViewController {
                     print("Error: ",error.localizedDescription)
                 }else {
                     self.labelOne.text = documentSnapshot?.get("Name") as? String ?? "nil"
-                    //                    self.pointLbl.text = String(documentSnapshot?.get("point") as? Int ?? 0) + "_"
                     let imgStr = documentSnapshot?.get("Photo") as? String
                     if imgStr == "nil" {
                         self.avatar.image = UIImage(named: "profile")
@@ -72,7 +74,7 @@ class ProfileViewController: UIViewController {
     }
 }
 struct StatusCell {
-    
+    //...
 }
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +82,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StatusTableViewCell
-        
+        //...
         return cell
     }
 }
