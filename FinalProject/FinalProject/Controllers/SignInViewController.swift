@@ -15,10 +15,13 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        signInButton.yellowButton()
+        email.setUnderLine()
+        password.setUnderLine()
     }
     
     
@@ -28,9 +31,7 @@ class SignInViewController: UIViewController {
                 
                 if error == nil {
                     print("Signed in successfully")
-                    self.dismiss(animated: false) {
-                        self.dismiss(animated: false, completion: nil)
-                    }
+                    self.performSegue(withIdentifier: "ToProfile2", sender: nil)
                     
                     
                 }else{
