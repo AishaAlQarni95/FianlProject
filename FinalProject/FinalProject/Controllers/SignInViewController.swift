@@ -23,14 +23,26 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func clickedSignIn(_ sender: Any) {
-        Auth.auth().signIn(withEmail: email.text! , password: password.text! ) { authResult, error in
-            if error == nil {
-                self.performSegue(withIdentifier: "ToProfile2", sender: nil)
-                print("Successfully logged in")
-            } else {
-                print(error?.localizedDescription)
-                print("Log in failed")
-            }
+        if email.text != "" && password.text != "" {
+            Auth.auth().signIn(withEmail: email.text!, password: password.text! , completion: { user, error in
+                
+                if error == nil {
+                    print("Signed in successfully")
+                    self.dismiss(animated: false) {
+                        self.dismiss(animated: false, completion: nil)
+                    }
+                    
+                    
+                }else{
+                    let alert = UIAlertController(title: "Warning", message: error?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            })
+        } else {
+            let alert = UIAlertController(title: "Incomplete information", message: "Email or password is incorrect", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
 }
